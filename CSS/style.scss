@@ -1,9 +1,10 @@
-$border: 0.1em solid black;
-// $border: none;
-$p1: #99D3DF;
-$p2: #88BBD6;
-$p3: #CDCDCD;
-$p4: #E9E9E9;
+// $border: 0.1em solid black;
+$border: none;
+$p1: #FFC30C;
+$p2: #212121;
+$p3: #f4f5f4;
+$p4: #ffffff;
+$p5: #e2e3eb;
 
 $simple: 'Montserrat', sans-serif;
 $cursive1: 'Dancing Script', cursive;
@@ -14,7 +15,6 @@ $footerpanelw: 23%;
 *{
     padding: 0;
     margin: 0;
-    // background: $p4; 
 }
 
 body{
@@ -22,12 +22,9 @@ body{
 }
 
 .mainContainer{
-    width: 100%;
+    width: 100%;    
     overflow: hidden;
 }
-
-// @import "backgroundani";
-// @import "getintouchanimation";
 
 .navbar{
     width: 100%;
@@ -50,18 +47,18 @@ body{
     margin-left: 2%;
 }
 
-.navbar .navopt{
+.navopt{
     width: 60%;
     height:  13vh;
-    background: pink;
+    // background: pink;
     float: right;
     margin-right: 2%;
 }
 
-.navbar .navopt .opt{
+.navopt .opt{
     width: 13%;
     height: 13vh;
-    background: blue;
+    // background: blue;
     float: left;
     margin-left: 1%;
     font-size: 1.3em;
@@ -69,7 +66,10 @@ body{
 }
 
 .navbar .navopt .opt:hover{
-    border-bottom: 0.2em solid black;
+    border-bottom: 0.2em solid $p1;
+}
+.navbar .navopt .opt:active{
+    border-bottom: 0.2em solid $p1;
 }
 
 .maintext{
@@ -93,89 +93,6 @@ body{
         margin-top: 10vh;
     }
 }
-
-
-
-// .dropdownpanel{
-
-//     width: 50%;
-//     height: 13vh;
-//     // background: red;
-//     float: right;
-//     margin-right: 10%;
-
-//     ul {
-//         // background: darkorange;
-//         list-style: none;
-//         margin: 0;
-//         padding-left: 0;
-//         font-size: 1.1em;
-//         // line-height: 120%;
-//         width: 100%;
-//         height: 13vh;
-//         margin-top: 3vh;
-//     }
-    
-//     li {
-//         color: #fff;
-//         background: black;
-//         display: block;
-//         float: left;
-//         padding: 1rem;
-//         position: relative;
-//         text-decoration: none;
-//         transition-duration: 0.5s;
-//         // margin-left: 1%;
-//     }
-        
-//     li a {
-//         color: #fff;
-//         text-decoration: none;
-//         // height: 13vh;
-//     }
-    
-//     li:hover,
-//     li:focus-within {
-//         // background: red;
-//         cursor: pointer;
-//     }
-    
-//     li:focus-within a {
-//         outline: none;
-//     }
-    
-//     ul li ul {
-//         // background: orange;
-//         visibility: hidden;
-//         opacity: 0;
-//         min-width: 5rem;
-//         position: absolute;
-//         transition: all 0.5s ease;
-//         margin-top: 1rem;
-//         left: 0;
-//         display: none;
-//     }
-    
-//     ul li:hover > ul,
-//     ul li:focus-within > ul,
-//     ul li ul:hover,
-//     ul li ul:focus {
-//         visibility: visible;
-//         opacity: 1;
-//         display: block;
-//     }
-    
-//     ul li ul li {
-//         clear: both;
-//         width: 100%;
-//     }
-// }
-
-// .MenuTitle{
-//     background: none;
-//     color: black;
-// }
-
 
 .imageslider{   
     width: 100%;
@@ -262,6 +179,7 @@ body{
     margin-top: 3vh;
     // background: rgb(190, 133, 190);
     // background: $p2
+    color: $p1;
 }
 
 .border{
@@ -269,7 +187,7 @@ body{
     height: 9vh;
     // margin-top: 0vh;
     // background: green;
-    background: $p1;
+    background: $p3;
     margin-left: 40%;
     border-radius: 6em;
     font-size: 3em;
@@ -280,10 +198,9 @@ body{
 .icon:hover{
     .border{
         // background: yellow;
-        background: $p2;
+        background: $p1;
         // color:rgb(190, 133, 190);
         color: $p4;
-        // transform: 10s;
     }
 }
 
@@ -306,11 +223,6 @@ body{
     text-align: center;
 }
 
-// .iconhr{
-//     width: 10%;
-//     float: left;
-// }
-
 .aboutusbutton{
     width: 100%;
     height: 10vh;
@@ -323,41 +235,42 @@ body{
     width: 12%;
     height: 10vh;
     text-transform: uppercase;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    background: $p1;
+    color: $p4;
+    font-weight: bold;
     // font-size: 1.5em;
     // border-radius: 0.5em;
 }
-
+.aboutusbutton button:hover{
+    background: $p2;
+}
 @media only screen and (max-width: 880px) {
     .caption{
         width: 80%;
         margin-left: 10%;
     }
-
     .cardcontent{
         height: 30vh;
     }
-
     .cardpanel{
         height: 70vh;
     }
-
     .aboutuscard{
         height: 70vh;
     }
-
     .border{
         width: 35%;
         margin-left: 32.5%;
     }
-
     .aboutus{
         height: 135vh;
     }
-
     .aboutusbutton button{
         width: 20%;
     }
-
 }
 
 @media only screen and (max-width: 580px){
@@ -371,16 +284,13 @@ body{
         margin-left: 5%;
         margin-top: 2vh;
     }
-
     .cardpanel{
         height:220vh;
         // overflow: hidden;
     }
-
     .aboutus{
         height: 300vh;
     }
-
     .aboutusbutton button{
         width: 35%;
     }
@@ -451,12 +361,22 @@ body{
     // background: rgb(109, 82, 82);
     margin-top: 1vh;
     // background: $p3;
-}
 
-.getintouch button{
-    width: 30%;
-    height: 10vh;
-    text-transform: uppercase;
+    button{
+        width: 30%;
+        height: 10vh;
+        text-transform: uppercase;
+        border:none;
+        border-radius: 0.5em;
+        color: $p1;
+        background: $p4;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    button:hover{
+        color: $p4;
+        background: $p1;
+    }
 }
 
 @media only screen and (max-width: 980px){
@@ -527,11 +447,10 @@ body{
     width: 100%;
     height: 30vh;
     // background: brown;
-}
-
-.photoimg img{
-    width: 100%;
-    height: 30vh;
+    img{
+        width: 100%;
+        height: 30vh;
+    }
 }
 
 .photocard:hover{
@@ -540,7 +459,7 @@ body{
         filter: grayscale(100%);
     }
     .photoarrow{
-        background: black;
+        background: $p1;
         color: white;
     }
 }
@@ -548,7 +467,8 @@ body{
 .photocap{
     width: 80%;
     height: 10vh;
-    background: yellow;
+    // background: yellow;
+    background: $p3 ;
     float: left;
     text-transform: uppercase;
     font-size: 1.5em;
@@ -557,7 +477,9 @@ body{
 .photoarrow{
     width: 20%;
     height: 10vh;
-    background: purple;
+    // background: purple;
+    background: $p5;
+    color: gray;
     float: left;
     text-align: center ;
     font-size: 1.5em;
@@ -569,12 +491,20 @@ body{
     // background: rgb(66, 2, 2);
     margin-top: 9vh;
     text-align: center;
-}
-
-.servicesbutton button{
-    width: 15%;
-    height: 10vh;
-    text-transform: uppercase;
+    button{
+        width: 15%;
+        height: 10vh;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0.5em;
+        background: $p1;
+        color: $p4;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover{
+        background: $p2;
+    }
 }
 
 @media only screen and (max-width: 750px){
@@ -680,7 +610,18 @@ body{
     width: 15%;
     height: 10vh;
     text-transform: uppercase;
+    border: none;
+    border-radius: 0.5em;
+    background: $p1;
+    color: $p4;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+.projectsbutton button:hover{
+    background: $p2;
+}
+
 
 @media only screen and (max-width: 855px){
     .projectimg{
@@ -761,7 +702,7 @@ body{
     width: 20%;
     height: 10vh;
     float: left;
-    background: purple;
+    // background: purple;
     font-size: 2.5em;
     text-align: center;
     // transform: translate(-50% -50%);
@@ -770,24 +711,37 @@ body{
     // vertical-align: middle;
 }
 
+.infocard .icon:hover{
+    color: black;
+}
+
 .infocard .infotext{
     width: 80%;
     height: 40vh;
-    background: brown;
+    // background: brown;
     float: left;
 }
 
 .infocard .infotext .title{
     margin-top: 3vh;
     height: 10vh;
-    background: pink;
+    // background: pink;
     font-size: 1.3em;
     font-weight: bold;
+    cursor: pointer;
 }
 
+.infocard:hover{
+    .icon{
+        color: black;
+    }
+}
+.infocard .infotext .title:hover{
+    color: $p1;
+}
 .infocard .infotext .text{
     height: 22vh;
-    background: green;
+    // background: green;
     margin-top: 3vh;
     font-size: 1.1em;
 }
@@ -825,16 +779,10 @@ body{
 .testimonials{
     width: 100%;
     height: 87vh;
-    background: green;
+    // background: green;
+    background-image: url("../Images/parallax-2.jpg");
     border: $border;
 }
-
-// .carousel{
-//     height: 87vh;
-//     overflow: hidden;
-// }
-
-
 
 /* Slideshow container */
 .slideshow-container {
@@ -845,11 +793,6 @@ body{
     overflow: hidden;
     // margin: auto;
   }
-  
-  /* Hide the images by default */
-//   .mySlides {
-//     // display: none;
-//   }
   
   /* Next & previous buttons */
   .prev, .next {
@@ -865,6 +808,7 @@ body{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background: rgba(0,0,0,0.5);
   }
   
   /* Position the "next button" to the right */
@@ -875,44 +819,9 @@ body{
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: $p1;
   }
   
-  /* Caption text */
-//   .slidetext {
-//     color: #f2f2f2;
-//     font-size: 15px;
-//     padding: 8px 12px;
-//     position: absolute;
-//     bottom: 8px;
-//     width: 100%;
-//     text-align: center;
-//   }
-  
-  /* Number text (1/3 etc) */
-//   .numbertext {
-//     color: #f2f2f2;
-//     font-size: 12px;
-//     padding: 8px 12px;
-//     position: absolute;
-//     top: 0;
-//   }
-  
-  /* The dots/bullets/indicators */
-//   .dot {
-//     cursor: pointer;
-//     height: 15px;
-//     width: 15px;
-//     margin: 0 2px;
-//     background-color: #bbb;
-//     border-radius: 50%;
-//     display: inline-block;
-//     transition: background-color 0.6s ease;
-//   }
-  
-//   .active, .dot:hover {
-//     background-color: #717171;
-//   }
   
   /* Fading animation */
   .fade {
@@ -932,13 +841,10 @@ body{
     to {opacity: 1}
   }
 
-
-
-
 .symbol{
     width: 100%;
     height: 20vh;
-    background:rgb(138, 228, 130);
+    // background:rgb(138, 228, 130);
     margin-top: 7vh;
     text-align: center;
     font-size: 1em;
@@ -948,7 +854,8 @@ body{
     width: 7%;
     margin-left: 46.5%;
     height: 10vh;
-    background: white;
+    background: $p1;
+    // border: 0.02em solid grey;  
     border-radius: 2em;
 }
 
@@ -960,7 +867,8 @@ body{
     text-align: center;
     line-height: 200%;
     font-size: 1.2em;
-    background: blue;
+    // background: blue;
+    color: white;
 }
 
 .authorname{
@@ -970,7 +878,8 @@ body{
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5em;
-    background: white;
+    // background: white;
+    color: white;
 }
 
 @media only screen and (max-width: 750px){
@@ -1005,14 +914,18 @@ body{
 .callus{
     width: 100%;
     height: 25vh;
-    background: red;
+    margin-top: 0;
+    // background: red;
+    background-image: url("../Images/bg-quote.jpg");
+    background-repeat: no-repeat;
+    // background-size: cover;
     border: $border;
 }
 
 .callustext{
     width: 100%;
     height: 10vh;
-    background: white;
+    // background: white;
     margin-top: 7.5vh;
 }
 
@@ -1022,7 +935,7 @@ body{
     width: 50%;
     text-align: center;
     float: left;
-    background: pink;
+    // background: pink;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -1033,19 +946,32 @@ body{
     font-size: 1.3em;
     float: right;
     margin-right: 5%;
+    margin-top: 3vh;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.callustext button:hover{
+    background: $p2;
+    color: white;
 }
 
 .footer{
     width: 100%;
     height: 80vh;
-    background: purple;
+    // background: purple;
+    background-image: url("../Images/bg-footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     border: $border;
+    color: white;
 }
 
 .aboutusfooter{
     width: $footerpanelw;
     height: 70vh;
-    background: yellow;
+    // background: yellow;
     float: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -1054,17 +980,22 @@ body{
 .ftitle{
     width: 100%;
     height: 10vh;
-    background: red;
+    // background: red;
     margin-top: 10vh;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.3em;
+    color: white;
+}
+
+.comicon{
+    background: white;
 }
 
 .aboutusfooter .caption{
     width: 100%;
     height: 15vh;
-    background: purple;
+    // background: purple;
     margin-top: 2vh;
     margin-left: 0;
     font-size: 1.3em;
@@ -1073,7 +1004,7 @@ body{
 .aboutusfooter .info{
     width: 100%;
     height: 25vh;
-    background: brown;
+    // background: brown;
     margin-top: 3vh;
     // line-height: 150%;
 }
@@ -1081,6 +1012,7 @@ body{
 .aboutusfooter .info i{
     margin-left: 1%;
     margin-right: 5%;
+    color: $p1;
 }
 
 .recentposts{
@@ -1088,14 +1020,14 @@ body{
     margin-left: 1%;
     margin-right: 1%;
     height: 70vh;
-    background: pink;
+    // background: pink;
     float: left;
 }
 
 .post{
     width: 100%;
     height: 19.5vh;
-    background: green;
+    // background: green;
     margin-top: 2vh;
 }
 
@@ -1103,13 +1035,13 @@ body{
     width: 100%;
     height: 10vh;
     margin-top: 2vh;
-    background: pink;
+    // background: pink;
 }
 
 .post .container .img{
     width: 25%;
     height: 10vh;
-    background: white;
+    // background: white;
     float: left;
     cursor: pointer;
 }
@@ -1123,7 +1055,7 @@ body{
     width: 70%;
     height: 10vh;
     margin-left: 5%;
-    background: brown;
+    // background: brown;
     float: right;
     // cursor: pointer;
 }
@@ -1140,7 +1072,7 @@ body{
 .tags{
     width: $footerpanelw;
     height: 70vh;
-    background: blue;
+    // background: blue;
     float: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -1150,7 +1082,7 @@ body{
     width: 45%;
     float: left;
     height: 8vh;
-    background: white;
+    background: black;
     margin-top: 2vh;
     margin-left: 2%;
     margin-right: 2%;
@@ -1158,12 +1090,16 @@ body{
     line-height: 250%;
     border-radius: 0.5em;
     cursor: pointer;
+    font-weight: bold;
+}
+.tagbox:hover{
+    background: $p1;
 }
 
 .insta{
     width: $footerpanelw;
     height: 70vh;
-    background: white;
+    // background: white;
     float: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -1172,7 +1108,7 @@ body{
 .instapost{
     width: 27.5%;
     height: 15vh;
-    background: black;
+    // background: black;
     float: left;
     margin-top: 5vh;
     margin-left: 2vh;
@@ -1187,8 +1123,21 @@ body{
 .ffooter{
     width: 100%;
     height: 10vh;
-    background: green;
+    // background: green;
+    background: $p2;
     clear: both;
+}
+.ffooter .navopt{
+    height: 10vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    // background: green;
+    border: none;
+    border-top: 0.02em solid white;
+}
+.ffooter .navopt .opt:hover{
+    color: $p1;
 }
 
 @media only screen and (max-width: 980px){

@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #E9E9E9;
+  background: #ffffff;
 }
 
 .mainContainer {
@@ -32,18 +32,16 @@ body {
   margin-left: 2%;
 }
 
-.navbar .navopt {
+.navopt {
   width: 60%;
   height: 13vh;
-  background: pink;
   float: right;
   margin-right: 2%;
 }
 
-.navbar .navopt .opt {
+.navopt .opt {
   width: 13%;
   height: 13vh;
-  background: blue;
   float: left;
   margin-left: 1%;
   font-size: 1.3em;
@@ -51,7 +49,11 @@ body {
 }
 
 .navbar .navopt .opt:hover {
-  border-bottom: 0.2em solid black;
+  border-bottom: 0.2em solid #FFC30C;
+}
+
+.navbar .navopt .opt:active {
+  border-bottom: 0.2em solid #FFC30C;
 }
 
 .maintext {
@@ -79,7 +81,7 @@ body {
   width: 100%;
   margin-top: 0;
   height: 97vh;
-  border: 0.1em solid black;
+  border: none;
 }
 
 .frame {
@@ -130,8 +132,8 @@ body {
 .aboutus {
   width: 100%;
   height: 125vh;
-  background: #E9E9E9;
-  border: 0.1em solid black;
+  background: #ffffff;
+  border: none;
 }
 
 .title {
@@ -168,12 +170,13 @@ body {
   width: 100%;
   height: 20vh;
   margin-top: 3vh;
+  color: #FFC30C;
 }
 
 .border {
   width: 20%;
   height: 9vh;
-  background: #99D3DF;
+  background: #f4f5f4;
   margin-left: 40%;
   border-radius: 6em;
   font-size: 3em;
@@ -182,8 +185,8 @@ body {
 }
 
 .icon:hover .border {
-  background: #88BBD6;
-  color: #E9E9E9;
+  background: #FFC30C;
+  color: #ffffff;
 }
 
 .cardtitle {
@@ -214,6 +217,16 @@ body {
   width: 12%;
   height: 10vh;
   text-transform: uppercase;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  background: #FFC30C;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.aboutusbutton button:hover {
+  background: #212121;
 }
 
 @media only screen and (max-width: 880px) {
@@ -267,7 +280,7 @@ body {
 .welcome {
   width: 100%;
   height: 100vh;
-  border: 0.1em solid black;
+  border: none;
 }
 
 .welcomeimage {
@@ -283,7 +296,7 @@ body {
   width: 50%;
   height: 100vh;
   float: left;
-  background: #CDCDCD;
+  background: #f4f5f4;
 }
 
 .welcometitle {
@@ -323,6 +336,17 @@ body {
   width: 30%;
   height: 10vh;
   text-transform: uppercase;
+  border: none;
+  border-radius: 0.5em;
+  color: #FFC30C;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.getintouch button:hover {
+  color: #ffffff;
+  background: #FFC30C;
 }
 
 @media only screen and (max-width: 980px) {
@@ -366,8 +390,8 @@ body {
   width: 100%;
   height: 110vh;
   background: grey;
-  border: 0.1em solid black;
-  background: #E9E9E9;
+  border: none;
+  background: #ffffff;
 }
 
 .servicespanel {
@@ -405,14 +429,14 @@ body {
 }
 
 .photocard:hover .photoarrow {
-  background: black;
+  background: #FFC30C;
   color: white;
 }
 
 .photocap {
   width: 80%;
   height: 10vh;
-  background: yellow;
+  background: #f4f5f4;
   float: left;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -421,7 +445,8 @@ body {
 .photoarrow {
   width: 20%;
   height: 10vh;
-  background: purple;
+  background: #e2e3eb;
+  color: gray;
   float: left;
   text-align: center;
   font-size: 1.5em;
@@ -438,6 +463,16 @@ body {
   width: 15%;
   height: 10vh;
   text-transform: uppercase;
+  border: none;
+  border-radius: 0.5em;
+  background: #FFC30C;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.servicesbutton button:hover {
+  background: #212121;
 }
 
 @media only screen and (max-width: 750px) {
@@ -488,8 +523,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 0.1em solid black;
-  color: #E9E9E9;
+  border: none;
+  color: #ffffff;
 }
 
 .projects .title {
@@ -534,6 +569,16 @@ body {
   width: 15%;
   height: 10vh;
   text-transform: uppercase;
+  border: none;
+  border-radius: 0.5em;
+  background: #FFC30C;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.projectsbutton button:hover {
+  background: #212121;
 }
 
 @media only screen and (max-width: 855px) {
@@ -584,8 +629,8 @@ body {
 .allservices {
   width: 100%;
   height: 130vh;
-  background: #E9E9E9;
-  border: 0.1em solid black;
+  background: #ffffff;
+  border: none;
 }
 
 .allservices .caption {
@@ -611,29 +656,38 @@ body {
   width: 20%;
   height: 10vh;
   float: left;
-  background: purple;
   font-size: 2.5em;
   text-align: center;
+}
+
+.infocard .icon:hover {
+  color: black;
 }
 
 .infocard .infotext {
   width: 80%;
   height: 40vh;
-  background: brown;
   float: left;
 }
 
 .infocard .infotext .title {
   margin-top: 3vh;
   height: 10vh;
-  background: pink;
   font-size: 1.3em;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.infocard:hover .icon {
+  color: black;
+}
+
+.infocard .infotext .title:hover {
+  color: #FFC30C;
 }
 
 .infocard .infotext .text {
   height: 22vh;
-  background: green;
   margin-top: 3vh;
   font-size: 1.1em;
 }
@@ -670,8 +724,8 @@ body {
 .testimonials {
   width: 100%;
   height: 87vh;
-  background: green;
-  border: 0.1em solid black;
+  background-image: url("../Images/parallax-2.jpg");
+  border: none;
 }
 
 /* Slideshow container */
@@ -682,7 +736,6 @@ body {
   overflow: hidden;
 }
 
-/* Hide the images by default */
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -701,6 +754,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* Position the "next button" to the right */
@@ -711,12 +765,9 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #FFC30C;
 }
 
-/* Caption text */
-/* Number text (1/3 etc) */
-/* The dots/bullets/indicators */
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -746,7 +797,6 @@ body {
 .symbol {
   width: 100%;
   height: 20vh;
-  background: #8ae482;
   margin-top: 7vh;
   text-align: center;
   font-size: 1em;
@@ -756,7 +806,7 @@ body {
   width: 7%;
   margin-left: 46.5%;
   height: 10vh;
-  background: white;
+  background: #FFC30C;
   border-radius: 2em;
 }
 
@@ -768,7 +818,7 @@ body {
   text-align: center;
   line-height: 200%;
   font-size: 1.2em;
-  background: blue;
+  color: white;
 }
 
 .authorname {
@@ -778,7 +828,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5em;
-  background: white;
+  color: white;
 }
 
 @media only screen and (max-width: 750px) {
@@ -813,14 +863,15 @@ body {
 .callus {
   width: 100%;
   height: 25vh;
-  background: red;
-  border: 0.1em solid black;
+  margin-top: 0;
+  background-image: url("../Images/bg-quote.jpg");
+  background-repeat: no-repeat;
+  border: none;
 }
 
 .callustext {
   width: 100%;
   height: 10vh;
-  background: white;
   margin-top: 7.5vh;
 }
 
@@ -830,7 +881,6 @@ body {
   width: 50%;
   text-align: center;
   float: left;
-  background: pink;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -841,19 +891,30 @@ body {
   font-size: 1.3em;
   float: right;
   margin-right: 5%;
+  margin-top: 3vh;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.callustext button:hover {
+  background: #212121;
+  color: white;
 }
 
 .footer {
   width: 100%;
   height: 80vh;
-  background: purple;
-  border: 0.1em solid black;
+  background-image: url("../Images/bg-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  color: white;
 }
 
 .aboutusfooter {
   width: 23%;
   height: 70vh;
-  background: yellow;
   float: left;
   margin-left: 1%;
   margin-right: 1%;
@@ -862,17 +923,20 @@ body {
 .ftitle {
   width: 100%;
   height: 10vh;
-  background: red;
   margin-top: 10vh;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3em;
+  color: white;
+}
+
+.comicon {
+  background: white;
 }
 
 .aboutusfooter .caption {
   width: 100%;
   height: 15vh;
-  background: purple;
   margin-top: 2vh;
   margin-left: 0;
   font-size: 1.3em;
@@ -881,13 +945,13 @@ body {
 .aboutusfooter .info {
   width: 100%;
   height: 25vh;
-  background: brown;
   margin-top: 3vh;
 }
 
 .aboutusfooter .info i {
   margin-left: 1%;
   margin-right: 5%;
+  color: #FFC30C;
 }
 
 .recentposts {
@@ -895,14 +959,12 @@ body {
   margin-left: 1%;
   margin-right: 1%;
   height: 70vh;
-  background: pink;
   float: left;
 }
 
 .post {
   width: 100%;
   height: 19.5vh;
-  background: green;
   margin-top: 2vh;
 }
 
@@ -910,13 +972,11 @@ body {
   width: 100%;
   height: 10vh;
   margin-top: 2vh;
-  background: pink;
 }
 
 .post .container .img {
   width: 25%;
   height: 10vh;
-  background: white;
   float: left;
   cursor: pointer;
 }
@@ -930,7 +990,6 @@ body {
   width: 70%;
   height: 10vh;
   margin-left: 5%;
-  background: brown;
   float: right;
 }
 
@@ -947,7 +1006,6 @@ body {
 .tags {
   width: 23%;
   height: 70vh;
-  background: blue;
   float: left;
   margin-left: 1%;
   margin-right: 1%;
@@ -957,7 +1015,7 @@ body {
   width: 45%;
   float: left;
   height: 8vh;
-  background: white;
+  background: black;
   margin-top: 2vh;
   margin-left: 2%;
   margin-right: 2%;
@@ -965,12 +1023,16 @@ body {
   line-height: 250%;
   border-radius: 0.5em;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.tagbox:hover {
+  background: #FFC30C;
 }
 
 .insta {
   width: 23%;
   height: 70vh;
-  background: white;
   float: left;
   margin-left: 1%;
   margin-right: 1%;
@@ -979,7 +1041,6 @@ body {
 .instapost {
   width: 27.5%;
   height: 15vh;
-  background: black;
   float: left;
   margin-top: 5vh;
   margin-left: 2vh;
@@ -994,8 +1055,21 @@ body {
 .ffooter {
   width: 100%;
   height: 10vh;
-  background: green;
+  background: #212121;
   clear: both;
+}
+
+.ffooter .navopt {
+  height: 10vh;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: none;
+  border-top: 0.02em solid white;
+}
+
+.ffooter .navopt .opt:hover {
+  color: #FFC30C;
 }
 
 @media only screen and (max-width: 980px) {
