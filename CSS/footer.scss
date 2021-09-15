@@ -1,0 +1,226 @@
+
+.footer{
+    width: 100%;
+    height: 80vh;
+    // background: purple;
+    background-image: url("../Images/bg-footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: $border;
+    color: white;
+}
+
+.aboutusfooter{
+    width: $footerpanelw;
+    height: 70vh;
+    // background: yellow;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.ftitle{
+    width: 100%;
+    height: 10vh;
+    // background: red;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: white;
+}
+
+.comicon{
+    background: white;
+}
+
+.aboutusfooter .caption{
+    width: 100%;
+    height: 15vh;
+    // background: purple;
+    margin-top: 2vh;
+    margin-left: 0;
+    font-size: 1.3em;
+}
+
+.aboutusfooter .info{
+    width: 100%;
+    height: 25vh;
+    // background: brown;
+    margin-top: 3vh;
+    // line-height: 150%;
+}
+
+.aboutusfooter .info i{
+    margin-left: 1%;
+    margin-right: 5%;
+    color: $p1;
+}
+
+.recentposts{
+    width: $footerpanelw;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 70vh;
+    // background: pink;
+    float: left;
+}
+
+.post{
+    width: 100%;
+    height: 19.5vh;
+    // background: green;
+    margin-top: 2vh;
+}
+
+.post .container{
+    width: 100%;
+    height: 10vh;
+    margin-top: 2vh;
+    // background: pink;
+}
+
+.post .container .img{
+    width: 25%;
+    height: 10vh;
+    // background: white;
+    float: left;
+    cursor: pointer;
+}
+
+.post .container .img img{
+    width: 100%;
+    height: 10vh;
+}
+
+.post .container .text{
+    width: 70%;
+    height: 10vh;
+    margin-left: 5%;
+    // background: brown;
+    float: right;
+    // cursor: pointer;
+}
+.FooterImgTitle{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.recentposts hr{
+    margin-top: 2vh;
+    border: 0.02em solid black; 
+}
+
+.tags{
+    width: $footerpanelw;
+    height: 70vh;
+    // background: blue;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.tagbox{
+    width: 45%;
+    float: left;
+    height: 8vh;
+    background: black;
+    margin-top: 2vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    line-height: 250%;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+}
+.tagbox:hover{
+    background: $p1;
+}
+
+.insta{
+    width: $footerpanelw;
+    height: 70vh;
+    // background: white;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.instapost{
+    width: 27.5%;
+    height: 15vh;
+    // background: black;
+    float: left;
+    margin-top: 5vh;
+    margin-left: 2vh;
+    cursor: pointer;
+}
+
+.instapost img{
+    width: 100%;
+    height: 15vh;
+}
+
+.ffooter{
+    width: 80%;
+    margin-left: 10%;
+    height: 10vh;
+    // background: green;
+    background: $p2;
+    clear: both;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.02em solid rgba(92, 92, 92, 0.5);
+}
+.ffooter a{
+    color: white;
+    text-decoration: none;
+}
+// .ffooter .navopt{
+//     height: 10vh;
+//     width: 90%;
+//     margin-left: 5%;
+//     margin-right: 5%;
+//     // background: green;
+//     border: none;
+//     border-top: 0.02em solid white;
+// }
+.ffooter a:hover{
+    color: $p1;
+}
+
+@media only screen and (max-width: 980px){
+    $footerpanelw: 47.5%; 
+    .aboutusfooter, .recentposts, .tags, .insta{
+        width: $footerpanelw;
+    }
+    .callus button{
+        width: 35%;
+    }   
+    .footer{
+        height: 150vh;
+    }
+    .calluscaption{
+        font-size: 1.2em;
+    }
+}
+
+
+@media only screen and (max-width: 565px){
+    $footerpanelw: 90%; 
+    .aboutusfooter, .recentposts, .tags, .insta{
+        width: $footerpanelw;
+        margin-left: 5%;
+    }
+    .callus button{
+        height: 7vh;
+        // width: 40%;
+        // margin-right: 25%;
+        // font-size: 0.5em; 
+    }   
+    .footer{
+        height: 290vh;
+    }
+}

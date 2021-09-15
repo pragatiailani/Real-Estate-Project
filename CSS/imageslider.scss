@@ -1,0 +1,48 @@
+
+.imageslider{   
+    width: 100%;
+    margin-top: 0;
+    height: 97vh;
+    // background: yellow;
+    border: $border;
+}
+
+
+.maintext{
+    width: 80%;
+    margin-left: 10%;
+    height: 50vh;
+    margin-top: 30vh;
+    // background: pink;
+    font-size: 7em;
+    text-align: center;
+    color: white;
+}
+
+.frame {
+    height: 97vh;
+    width: 100%;
+    // margin: 5vh 5vw;
+    // background-color: #eee;
+    background-position: center;
+    background-size: cover;
+    animation: image 15s infinite alternate;
+  }
+  
+  @keyframes image {
+    0% {
+         background-image: url("../Images/project-1-370x245.jpg");
+    }
+    25% {
+        background-image: url("../Images/project-2-370x245.jpg");
+    }
+    50%{
+        background-image: url("../Images/project-3-370x245.jpg")
+    }
+    75%{
+        background-image: url("../Images/project-4-370x245.jpg")
+    }
+    100%{
+        background-image: url("../Images/project-5-440x280.jpg")
+    }
+  }

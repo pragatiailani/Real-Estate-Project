@@ -1,0 +1,100 @@
+
+nav {
+    width: 100%;
+    height: 9vh;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 0px 15px 31px -5px rgba(0,0,0,0.5);
+}
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+nav .mainMenu li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 80%;
+    width: 0%;
+    height: 0.1em;
+    background-color: black;
+    transition: all 0.3s linear;
+}
+
+nav .mainMenu li a:hover:before{
+    width: 100%;
+    background: $p1;
+}
+
+// nav .mainMenu li a:hover {
+//     // text-decoratin: underline;
+//     border-bottom: 0.3em solid $p1;
+// }
+nav .openMenu {
+    font-size: 2rem;
+    margin: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 8px;
+    font-size: 25px;
+    // background: url("../Images/logo-small.png");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu{
+    display: none;
+}
+
+@media(max-width: 979px){
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        /* color: rgb(255, 123, 0); */
+        // border-bottom: 0.2em solid $p1;
+        font-size: 1.6rem;
+    }
+}

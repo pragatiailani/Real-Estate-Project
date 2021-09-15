@@ -1,0 +1,148 @@
+
+.welcome{
+    width: 100%;
+    height: 100vh;
+    // background: red;
+    border: $border;
+}
+
+.welcomeimage{
+    width: 50%;
+    height: 100vh;
+    // background: rgb(146, 86, 86);
+    background-image: url("../Images/gallery-1-960x560.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    float: left;
+}
+
+.welcometext{
+    width: 50%;
+    height: 100vh;
+    // background: rgb(138, 228, 130);
+    float: left;
+    background: $p3;
+}
+
+.welcometitle{
+    width: 98%;
+    margin-left: 2%;
+    text-align: left;
+    // background: $p3;
+}
+
+.welcomecaption{
+    width: 80%;
+    margin-top: 5vh;
+    margin-left: 2%;
+    height: 23vh;
+    font-size: 1.5em;
+}
+
+.welcomecontent{
+    width: 80%;
+    margin-left: 5%;
+    height: 35vh;
+    font-size: 1.2em;
+    line-height: 170%;
+}
+
+.welcomecontent ul{
+    list-style-type:square;
+}
+
+.getintouch{
+    width: 90%;
+    margin-left: 2%;
+    height: 10vh;
+    margin-top: 1vh;
+
+    button{
+        width: 30%;
+        height: 10vh;
+        text-transform: uppercase;
+        border:none;
+        border-radius: 0.5em;
+        color: $p1;
+        background: $p4;
+        cursor: pointer;
+        font-weight: bold;
+        //@at-root
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;  
+        z-index: 1;
+        transition: all 0.1s linear;
+        overflow: hidden;
+    }
+    button:hover{
+        color: $p4;
+    }
+    button::before{
+        content: "";
+        height: $abh;
+        width: 100%;
+        background: $p1;
+        position: absolute;
+        transform: translateY(-100%); 
+        transition: all 0.2s linear;
+        z-index: -1;
+    }
+    
+    button::after{
+        content: "";
+        height: $abh;
+        width: 100%;
+        background: $p1;
+        position: absolute;
+        transform: translateY(100%);
+        transition: all 0.2s linear;
+        z-index: -1;
+    }
+    button:hover:before{
+        transform: translateY(-50%);
+    }
+    
+    button:hover:after{
+        transform: translateY(40%);
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .welcomecaption{
+        width: 100%;
+    }
+    .welcomecontent{
+        width: 95%
+    }
+}
+
+@media only screen and (max-width: 785px){
+    .welcomecaption{
+        margin-top: 2vh;
+        height: 25vh;
+    }
+    .getintouch button{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .welcome{
+        height: 205vh;
+    }
+    .welcomeimage{
+        width: 100%;
+    }
+    .welcometext{
+        width: 100%;
+    }
+    .getintouch{
+        text-align: center;
+    }
+    .welcometitle{
+        text-align: center;
+    }
+}

@@ -1,0 +1,145 @@
+
+.projects{
+    width: 100%;
+    height: 90vh;
+    background-image: url("../Images/parallax-2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: $border;
+    color: $p4;
+}
+
+.projects .title{
+    margin-top: 10vh;
+}
+
+.projectpanel{
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 35vh;
+}
+
+.projectimg{
+    width: 22%;
+    height: 35vh;
+    float: left;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.projectimg img{
+    width: 100%;
+    height: 35vh;
+}
+
+.projectimg:hover{
+    img{
+        transition: all 0.2s ease-in-out;
+        filter: grayscale(100%);
+        // z-index: 100;
+    }
+}
+
+.projectsbutton{
+    width: 100%;
+    height: 10vh;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.projectsbutton button{
+    width: 15%;
+    height: 10vh;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5em;
+    background: $p1;
+    color: $p4;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    z-index: 1;
+    overflow: hidden;
+}
+
+.projectsbutton button::before{
+    content: "";
+    height: $abh;
+    width: 100%;
+    background: $p2;
+    position: absolute;
+    transform: translateY(-100%); 
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+
+.projectsbutton button::after{
+    content: "";
+    height: $abh;
+    width: 100%;
+    background: $p2;
+    position: absolute;
+    transform: translateY(100%);
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+
+.projectsbutton button:hover:before{
+    transform: translateY(-50%);
+}
+
+.projectsbutton button:hover:after{
+    transform: translateY(40%);
+}
+
+
+@media only screen and (max-width: 855px){
+    .projectimg{
+        width: 40%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 2vh;
+    }
+    .projectpanel{
+        height: 80vh;
+    }
+    .projects{
+        height:130vh;
+    }
+    .projectsbutton button{
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 455px){
+    .projectimg{
+        width: 45%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    .projectsbutton button{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 388px){
+    .projectimg{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .projectpanel{
+        height: 150vh;
+    }
+    .projects{
+        height: 200vh;
+    }
+    .projectsbutton button{
+        width: 40%;
+    }
+}
