@@ -1,38 +1,10 @@
-// $border: 0.1em solid black;
-$border: none;
-$p1: #FFC30C;
-$p2: #212121;
-$p3: #f4f5f4;
-$p4: #ffffff;
-$p5: #e2e3eb;
-
-$simple: 'Gentium Basic', serif;
-$cursive1: 'Parisienne', cursive;
-$cursive2: 'Dancing Script', cursive; 
-
-$footerpanelw: 23%;
-
-*{
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    background: $p4;
-    font-family: $simple;
-    font-size: 1.1em;
-}
-
 .mainContainer{
     width: 100%;    
     overflow: hidden;
 }
 
-@import "nav", "imageslider", "aboutus", "welcome", "ourservices", "projects", "allservices", "testimonials", "callus", "footer";
+@import "common", "imageslider", "aboutus", "welcome", "ourservices", "projects", "allservices", "testimonials", "callus";
 
-.design{
-    position: relative; 
-}
 
 .iconhri{
     color: $p1;
@@ -51,4 +23,22 @@ body{
     z-index: -1;
     transform: translateX(-60%);
     top: 65%;
+}
+
+.title{
+    width: 100%;
+    margin-top: 5vh;
+    height: 15vh;
+    text-align: center;
+    font-family: $cursive1;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.caption{
+    width: 50%;
+    margin-left: 25%;
+    height: 20vh;
+    text-align: center;
+    font-size: 1.5em;
 }

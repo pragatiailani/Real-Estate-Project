@@ -1,0 +1,26 @@
+// $border: 0.1em solid black;
+$border: none;
+$p1: #FFC30C;
+$p2: #212121;
+$p3: #f4f5f4;
+$p4: #ffffff;
+$p5: #e2e3eb;
+
+$simple: 'Gentium Basic', serif;
+$cursive1: 'Parisienne', cursive;
+$cursive2: 'Dancing Script', cursive; 
+
+$footerpanelw: 23%;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: $p4;
+    font-family: $simple;
+    font-size: 1.1em;
+}
+
+@import "nav", "footer";

@@ -41,10 +41,11 @@ nav .mainMenu li a:hover:before{
     background: $p1;
 }
 
-// nav .mainMenu li a:hover {
-//     // text-decoratin: underline;
-//     border-bottom: 0.3em solid $p1;
+// nav .mainMenu li a:active:before{
+//     width: 100%;
+//     background: $p1;
 // }
+
 nav .openMenu {
     font-size: 2rem;
     margin: 10px;
@@ -55,9 +56,6 @@ nav .openMenu {
 nav .logo {
     margin: 8px;
     font-size: 25px;
-    // background: url("../Images/logo-small.png");
-    // background-repeat: no-repeat;
-    // background-size: cover;
     margin-left: 2%;
     cursor: pointer;
 }
@@ -93,8 +91,6 @@ nav .mainMenu .closeMenu{
     }
     nav .mainMenu li a:hover {
         background: none;
-        /* color: rgb(255, 123, 0); */
-        // border-bottom: 0.2em solid $p1;
         font-size: 1.6rem;
     }
 }

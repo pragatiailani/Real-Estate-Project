@@ -6,24 +6,6 @@
     border: $border;
 }
 
-.title{
-    width: 100%;
-    margin-top: 5vh;
-    height: 15vh;
-    text-align: center;
-    font-family: $cursive1;
-    font-weight: bold;
-    font-size: 2.5em;
-}
-
-.caption{
-    width: 50%;
-    margin-left: 25%;
-    height: 20vh;
-    text-align: center;
-    font-size: 1.5em;
-}
-
 .cardpanel{
     width: 100%;
     height: 53vh;
@@ -68,7 +50,6 @@
     width: 100%;
     height: 7vh;
     margin-top: 2vh;
-    // text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     font-size: 2em;

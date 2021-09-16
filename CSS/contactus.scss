@@ -1,0 +1,29 @@
+@import "common";
+
+.leftdiv{
+    width: 45%;
+    margin-left: 7%;
+    margin-right: 3%;
+    float: left;
+    height: 140vh;
+    background: green;
+}
+
+.title{
+    width: 100%;
+    margin-top: 10vh;
+    height: 15vh;
+    text-align: center;
+    font-family: $cursive1;
+    font-weight: bold;
+    font-size: 2.5em;
+    background: black;
+}
+
+.rightdiv{
+    width: 38%;
+    margin-right: 7%;
+    float: right;
+    height: 140vh;
+    background: yellow;
+}

@@ -1,3 +1,8 @@
+.mainContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,11 +12,6 @@ body {
   background: #ffffff;
   font-family: "Gentium Basic", serif;
   font-size: 1.1em;
-}
-
-.mainContainer {
-  width: 100%;
-  overflow: hidden;
 }
 
 nav {
@@ -118,8 +118,211 @@ nav .mainMenu .closeMenu {
   }
   nav .mainMenu li a:hover {
     background: none;
-    /* color: rgb(255, 123, 0); */
     font-size: 1.6rem;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../Images/bg-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  color: white;
+  clear: both;
+}
+
+.aboutusfooter {
+  width: 23%;
+  height: 70vh;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.ftitle {
+  width: 100%;
+  height: 10vh;
+  margin-top: 10vh;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+}
+
+.comicon {
+  background: white;
+}
+
+.aboutusfooter .caption {
+  width: 100%;
+  height: 15vh;
+  margin-top: 2vh;
+  margin-left: 0;
+  font-size: 1.3em;
+}
+
+.aboutusfooter .info {
+  width: 100%;
+  height: 25vh;
+  margin-top: 3vh;
+}
+
+.aboutusfooter .info i {
+  margin-left: 1%;
+  margin-right: 5%;
+  color: #FFC30C;
+}
+
+.recentposts {
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 70vh;
+  float: left;
+}
+
+.post {
+  width: 100%;
+  height: 19.5vh;
+  margin-top: 2vh;
+}
+
+.post .container {
+  width: 100%;
+  height: 10vh;
+  margin-top: 2vh;
+}
+
+.post .container .img {
+  width: 25%;
+  height: 10vh;
+  float: left;
+  cursor: pointer;
+}
+
+.post .container .img img {
+  width: 100%;
+  height: 10vh;
+}
+
+.post .container .text {
+  width: 70%;
+  height: 10vh;
+  margin-left: 5%;
+  float: right;
+}
+
+.FooterImgTitle {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.recentposts hr {
+  margin-top: 2vh;
+  border: 0.02em solid black;
+}
+
+.tags {
+  width: 23%;
+  height: 70vh;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.tagbox {
+  width: 45%;
+  float: left;
+  height: 8vh;
+  background: black;
+  margin-top: 2vh;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
+  line-height: 250%;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tagbox:hover {
+  background: #FFC30C;
+}
+
+.insta {
+  width: 23%;
+  height: 70vh;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.instapost {
+  width: 27.5%;
+  height: 15vh;
+  float: left;
+  margin-top: 5vh;
+  margin-left: 2vh;
+  cursor: pointer;
+}
+
+.instapost img {
+  width: 100%;
+  height: 15vh;
+}
+
+.ffooter {
+  width: 80%;
+  margin-left: 10%;
+  height: 10vh;
+  background: #212121;
+  clear: both;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.02em solid rgba(92, 92, 92, 0.5);
+}
+
+.ffooter a {
+  color: white;
+  text-decoration: none;
+}
+
+.ffooter a:hover {
+  color: #FFC30C;
+}
+
+@media only screen and (max-width: 980px) {
+  .aboutusfooter, .recentposts, .tags, .insta {
+    width: 47.5%;
+  }
+  .callus button {
+    width: 35%;
+  }
+  .footer {
+    height: 150vh;
+  }
+  .calluscaption {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .aboutusfooter, .recentposts, .tags, .insta {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .callus button {
+    height: 7vh;
+  }
+  .footer {
+    height: 290vh;
   }
 }
 
@@ -190,24 +393,6 @@ nav .mainMenu .closeMenu {
   height: 115vh;
   background: #ffffff;
   border: none;
-}
-
-.title {
-  width: 100%;
-  margin-top: 5vh;
-  height: 15vh;
-  text-align: center;
-  font-family: "Parisienne", cursive;
-  font-weight: bold;
-  font-size: 2.5em;
-}
-
-.caption {
-  width: 50%;
-  margin-left: 25%;
-  height: 20vh;
-  text-align: center;
-  font-size: 1.5em;
 }
 
 .cardpanel {
@@ -1252,213 +1437,6 @@ nav .mainMenu .closeMenu {
   }
 }
 
-.footer {
-  width: 100%;
-  height: 80vh;
-  background-image: url("../Images/bg-footer.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-  color: white;
-}
-
-.aboutusfooter {
-  width: 23%;
-  height: 70vh;
-  float: left;
-  margin-left: 1%;
-  margin-right: 1%;
-}
-
-.ftitle {
-  width: 100%;
-  height: 10vh;
-  margin-top: 10vh;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3em;
-  color: white;
-}
-
-.comicon {
-  background: white;
-}
-
-.aboutusfooter .caption {
-  width: 100%;
-  height: 15vh;
-  margin-top: 2vh;
-  margin-left: 0;
-  font-size: 1.3em;
-}
-
-.aboutusfooter .info {
-  width: 100%;
-  height: 25vh;
-  margin-top: 3vh;
-}
-
-.aboutusfooter .info i {
-  margin-left: 1%;
-  margin-right: 5%;
-  color: #FFC30C;
-}
-
-.recentposts {
-  width: 23%;
-  margin-left: 1%;
-  margin-right: 1%;
-  height: 70vh;
-  float: left;
-}
-
-.post {
-  width: 100%;
-  height: 19.5vh;
-  margin-top: 2vh;
-}
-
-.post .container {
-  width: 100%;
-  height: 10vh;
-  margin-top: 2vh;
-}
-
-.post .container .img {
-  width: 25%;
-  height: 10vh;
-  float: left;
-  cursor: pointer;
-}
-
-.post .container .img img {
-  width: 100%;
-  height: 10vh;
-}
-
-.post .container .text {
-  width: 70%;
-  height: 10vh;
-  margin-left: 5%;
-  float: right;
-}
-
-.FooterImgTitle {
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.recentposts hr {
-  margin-top: 2vh;
-  border: 0.02em solid black;
-}
-
-.tags {
-  width: 23%;
-  height: 70vh;
-  float: left;
-  margin-left: 1%;
-  margin-right: 1%;
-}
-
-.tagbox {
-  width: 45%;
-  float: left;
-  height: 8vh;
-  background: black;
-  margin-top: 2vh;
-  margin-left: 2%;
-  margin-right: 2%;
-  text-align: center;
-  line-height: 250%;
-  border-radius: 0.5em;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.tagbox:hover {
-  background: #FFC30C;
-}
-
-.insta {
-  width: 23%;
-  height: 70vh;
-  float: left;
-  margin-left: 1%;
-  margin-right: 1%;
-}
-
-.instapost {
-  width: 27.5%;
-  height: 15vh;
-  float: left;
-  margin-top: 5vh;
-  margin-left: 2vh;
-  cursor: pointer;
-}
-
-.instapost img {
-  width: 100%;
-  height: 15vh;
-}
-
-.ffooter {
-  width: 80%;
-  margin-left: 10%;
-  height: 10vh;
-  background: #212121;
-  clear: both;
-  text-align: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 0.02em solid rgba(92, 92, 92, 0.5);
-}
-
-.ffooter a {
-  color: white;
-  text-decoration: none;
-}
-
-.ffooter a:hover {
-  color: #FFC30C;
-}
-
-@media only screen and (max-width: 980px) {
-  .aboutusfooter, .recentposts, .tags, .insta {
-    width: 47.5%;
-  }
-  .callus button {
-    width: 35%;
-  }
-  .footer {
-    height: 150vh;
-  }
-  .calluscaption {
-    font-size: 1.2em;
-  }
-}
-
-@media only screen and (max-width: 565px) {
-  .aboutusfooter, .recentposts, .tags, .insta {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .callus button {
-    height: 7vh;
-  }
-  .footer {
-    height: 290vh;
-  }
-}
-
-.design {
-  position: relative;
-}
-
 .iconhri {
   color: #FFC30C;
   font-size: 1em;
@@ -1477,5 +1455,23 @@ nav .mainMenu .closeMenu {
   -webkit-transform: translateX(-60%);
           transform: translateX(-60%);
   top: 65%;
+}
+
+.title {
+  width: 100%;
+  margin-top: 5vh;
+  height: 15vh;
+  text-align: center;
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.caption {
+  width: 50%;
+  margin-left: 25%;
+  height: 20vh;
+  text-align: center;
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
