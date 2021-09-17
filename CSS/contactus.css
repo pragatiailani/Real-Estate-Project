@@ -1,11 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Gentium Basic", serif;
 }
 
 body {
   background: #ffffff;
-  font-family: "Gentium Basic", serif;
   font-size: 1.1em;
 }
 
@@ -330,15 +330,94 @@ nav .mainMenu .closeMenu {
   background: green;
 }
 
+.leftdiv .caption {
+  width: 100%;
+  margin-top: 3vh;
+  height: 10vh;
+  background: blue;
+}
+
+.leftdiv .message {
+  width: 100%;
+  margin-top: 5vh;
+  height: 75vh;
+  background: pink;
+  overflow: hidden;
+}
+
+.leftdiv .message input {
+  padding: 1em 1em;
+  width: 48.5vh;
+  margin-top: 1.5vh;
+  font-size: 1em;
+  outline: none;
+  border: 0.02em solid gray;
+}
+
+.leftdiv .message input:focus {
+  border: 0.02em solid #FFC30C;
+}
+
+.leftdiv .message .inputdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leftdiv .message .inputdiv input:last-child {
+  margin-left: 1.5%;
+}
+
+.leftdiv .message textarea {
+  resize: none;
+  margin-top: 1.5vh;
+  width: 94%;
+  font-size: 1em;
+  padding: 1em 1em;
+  outline: none;
+  border: 0.02em solid gray;
+}
+
+.leftdiv .message textarea:focus {
+  border: 0.02em solid #FFC30C;
+}
+
+.leftdiv .message input[type="submit"] {
+  background: #FFC30C;
+  color: white;
+  border: none;
+  font-weight: bold;
+  width: 30%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.leftdiv .message input[type="submit"]:hover {
+  background: #212121;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
 .title {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 15vh;
   height: 15vh;
   text-align: center;
   font-family: "Parisienne", cursive;
   font-weight: bold;
   font-size: 2.5em;
-  background: black;
+  background: white;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 0.3vh;
+  background: #FFC30C;
+  top: 65%;
 }
 
 .rightdiv {
@@ -347,5 +426,79 @@ nav .mainMenu .closeMenu {
   float: right;
   height: 140vh;
   background: yellow;
+}
+
+.tabcontainer {
+  height: 40vh;
+  width: 100%;
+  background: purple;
+  margin-top: 3vh;
+}
+
+.tabcontainer .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tabcontainer .tabs input[type="radio"] {
+  display: none;
+}
+
+.tabcontainer .tabs label {
+  background: white;
+  font-weight: bold;
+  padding: 0.5em 1.3em;
+  margin-left: 1%;
+  margin-bottom: 0.5vh;
+  border: 0.01em solid gray;
+  font-size: 1.2em;
+  color: gray;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+          box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+}
+
+.tabcontainer .tabs label[for="tab1"] {
+  margin-left: 0;
+}
+
+.tabcontainer .tabs label:hover {
+  color: black;
+}
+
+.tabcontainer .tabs .tab {
+  width: 100%;
+  background: #FAFAFB;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: none;
+  line-height: 200%;
+  border: 0.01em solid gray;
+  -webkit-box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+          box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+}
+
+.tabcontainer .tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+.tabcontainer .tabs input[type="radio"]:checked + label {
+  background: #FAFAFB;
+  color: black;
+}
+
+.map {
+  height: 40vh;
+  width: 100%;
+  background-image: url("../Images/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=contactus.css.map */
