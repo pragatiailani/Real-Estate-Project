@@ -5,26 +5,26 @@
     margin-left: 7%;
     margin-right: 3%;
     float: left;
-    height: 140vh;
-    background: green;
+    height: 127vh;
+    // background: green;
     
     .caption{
         width: 100%;
         margin-top: 3vh;
         height: 10vh;
-        background: blue;
+        // background: blue;
     }
 
     .message{
         width: 100%;
         margin-top: 5vh;
         height: 75vh;
-        background: pink;
+        // background: pink;
         overflow: hidden;
 
         input{
             padding: 1em 1em;
-            width: 48.5vh;
+            width: 48.5%;
             margin-top: 1.5vh;
             font-size: 1em;
             outline: none;
@@ -42,7 +42,7 @@
         textarea{
             resize: none;
             margin-top: 1.5vh;
-            width: 94%;
+            width: 100%;
             font-size: 1em;
             padding: 1em 1em;
             outline: none;
@@ -93,14 +93,14 @@
     width: 38%;
     margin-right: 7%;
     float: right;
-    height: 140vh;
-    background: yellow;
+    height: 120vh;
+    // background: yellow;
 }
 
 .tabcontainer{
     height: 40vh;
     width: 100%;
-    background: purple;
+    // background: purple;
     margin-top: 3vh;
 
     .tabs{ 
@@ -157,4 +157,52 @@
     background-image: url("../Images/map.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media(max-width: 1212px){
+    .leftdiv{
+        margin-left: 2%;
+        width: 50%;
+    }
+    .rightdiv{
+        margin-right: 2%;
+        width: 43%;
+    }
+}
+
+@media(max-width: 1070px){
+    .leftdiv{
+        margin-right: 1%;
+        width: 52%;
+    }
+    .tabcontainer{
+        .tabs{
+            label{
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media(max-width: 915px){
+    .title{
+        margin-top: 10vh;
+    }
+    .leftdiv .message{
+        height: 65vh;
+    }
+    .leftdiv{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: 110vh;
+    }
+    .rightdiv{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: 120vh;
+    }
 }
