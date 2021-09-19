@@ -240,6 +240,17 @@ nav .mainMenu .closeMenu {
   border-radius: 0.5em;
   cursor: pointer;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .tagbox:hover {
@@ -321,57 +332,319 @@ nav .mainMenu .closeMenu {
   }
 }
 
-.leftdiv .title {
+.aboutus {
+  width: 100%;
+  height: 115vh;
+  background: #ffffff;
+  border: none;
+}
+
+.cardpanel {
+  width: 100%;
+  height: 53vh;
+}
+
+.aboutuscard {
+  width: 30%;
+  height: 53vh;
+  float: left;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+.icon {
+  width: 100%;
+  height: 20vh;
+  margin-top: 3vh;
+  color: #FFC30C;
+}
+
+.icon .border {
+  width: 90px;
+  height: 90px;
+  background: #f4f5f4;
+  border-radius: 50%;
+  color: #FFC30C;
+  text-align: center;
+  margin-left: 40%;
+  font-size: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.icon .border:hover {
+  background: #FFC30C;
+  color: #ffffff;
+}
+
+.cardtitle {
+  width: 100%;
+  height: 7vh;
+  margin-top: 2vh;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Dancing Script", cursive;
+}
+
+.cardcontent {
+  width: 100%;
+  height: 20vh;
+  margin-top: 0vh;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.aboutusbutton {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutusbutton button {
+  width: 12%;
+  height: 10vh;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  background: #FFC30C;
+  color: #ffffff;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.aboutusbutton button::before {
+  content: "";
+  height: 10vh;
+  width: 100%;
+  background: #212121;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.aboutusbutton button::after {
+  content: "";
+  height: 10vh;
+  width: 100%;
+  background: #212121;
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+.aboutusbutton button:hover:before {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.aboutusbutton button:hover:after {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+@media only screen and (max-width: 880px) {
+  .caption {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .cardcontent {
+    height: 15vh;
+  }
+  .cardpanel {
+    height: 70vh;
+  }
+  .aboutuscard {
+    height: 70vh;
+  }
+  .border {
+    width: 35%;
+  }
+  .aboutus {
+    height: 135vh;
+  }
+  .aboutusbutton button {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .caption {
+    width: 100%;
+    margin-left: 0;
+    height: 30vh;
+  }
+  .aboutuscard {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2vh;
+    height: 60vh;
+  }
+  .cardpanel {
+    height: 220vh;
+  }
+  .aboutus {
+    height: 300vh;
+  }
+  .aboutusbutton button {
+    width: 35%;
+  }
+}
+
+.title {
   width: 100%;
   margin-top: 5vh;
   height: 15vh;
-  text-align: center;
   font-family: "Parisienne", cursive;
   font-weight: bold;
   font-size: 2.5em;
-  background: black;
+  background: #555575;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 0.3vh;
+  background: #FFC30C;
+  top: 65%;
 }
 
 .leftdiv .caption {
   width: 100%;
   height: 25vh;
-  text-align: center;
-  font-size: 1.5em;
+  font-size: 1em;
   background: yellow;
   margin-top: 4vh;
 }
 
 .leftdiv {
-  width: 63%;
-  height: 300vh;
+  width: 60%;
+  height: 290vh;
   background: purple;
   float: left;
   margin-left: 7%;
+  margin-right: 3%;
 }
 
 .abouttext {
-  width: 97%;
+  width: 100%;
   height: 45vh;
   background: blue;
   margin-top: 20vh;
 }
 
+.aboutuscard {
+  height: 45vh;
+  background: yellow;
+  border: 0.01em solid #929191;
+  width: 32%;
+  margin-right: 0;
+}
+
+.aboutuscard:first-child {
+  margin-left: 0;
+}
+
+.icon {
+  margin-top: 0;
+  height: 15vh;
+  background: purple;
+}
+
+.icon .border {
+  width: 70px;
+  height: 70px;
+  margin-left: 37%;
+  font-size: 2.5em;
+}
+
+.cardtitle {
+  margin-top: 1vh;
+  height: 8vh;
+  font-size: 1.7em;
+  position: relative;
+}
+
+.cardtitle::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  top: 95%;
+  left: 35%;
+  height: 0.3vh;
+  background: #929191;
+}
+
+.cardcontent {
+  margin-top: 1vh;
+  font-size: 0.9em;
+  background: orange;
+}
+
 .cards {
-  width: 97%;
+  width: 100%;
   height: 45vh;
   background: brown;
   margin-top: 5vh;
 }
 
 .history {
-  width: 97%;
-  height: 30%;
+  width: 100%;
+  height: 80vh;
   margin-top: 5vh;
   background: blue;
 }
 
+.history .hbox {
+  height: 25vh;
+  margin-top: 0.5vh;
+  background: brown;
+  width: 43%;
+  padding: 1em 1em;
+  float: left;
+  margin-left: 1%;
+  border: 0.01em solid #929191;
+}
+
 .accordion {
-  width: 97%;
+  width: 100%;
   min-height: 80vh;
   margin-top: 5vh;
   background: orange;
@@ -473,18 +746,151 @@ nav .mainMenu .closeMenu {
 }
 
 .rightdiv {
-  width: 30%;
+  width: 23%;
+  margin-right: 7%;
   height: 200vh;
   background: pink;
   float: right;
 }
 
-@media only screen and (max-width: 985px) {
+.rightdiv .title {
+  clear: both;
+  font-size: 2em;
+  height: 12vh;
+}
+
+.rightdiv .insta {
+  width: 100%;
+  float: none;
+  background: red;
+  height: 35vh;
+}
+
+.rightdiv .insta .instapost {
+  margin-top: 1.5vh;
+}
+
+.rightdiv .twitter li {
+  margin-left: 10%;
+  position: relative;
+  margin-top: 2vh;
+  padding: 0.5em 0.5em;
+  list-style-type: none;
+}
+
+.rightdiv .twitter span {
+  font-weight: bold;
+}
+
+.rightdiv .twitter span:hover {
+  color: #FFC30C;
+}
+
+.rightdiv .twitter li:before {
+  content: '\f081';
+  font-family: "FontAwesome";
+  position: absolute;
+  font-size: 2em;
+  margin-left: -40px;
+  margin-right: 10px;
+  top: 5px;
+  color: #212121;
+}
+
+.rightdiv .twitter li:hover:before {
+  color: #FFC30C;
+}
+
+.topics {
+  height: 27vh;
+  width: 100%;
+  margin-top: 19vh;
+  background: #414141;
+}
+
+.topics li {
+  padding: 0.9em 1em;
+  margin-left: 15%;
+  margin-right: 15%;
+  cursor: pointer;
+  border-bottom: 0.02em solid #9e9e9e;
+  color: white;
+  font-weight: bold;
+}
+
+.topics li:last-child {
+  border-bottom: none;
+}
+
+.topics li:hover {
+  color: #F3A835;
+}
+
+@media only screen and (max-width: 1085px) {
   .leftdiv {
-    width: 100%;
+    margin-left: 5%;
+    width: 62%;
   }
   .rightdiv {
+    margin-right: 5%;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 985px) {
+  .leftdiv {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .rightdiv {
+    width: 95%;
+    margin-right: 2.5%;
+    height: 160vh;
+  }
+  .rightdiv .insta {
+    height: 55vh;
+    margin-left: 0;
+  }
+  .rightdiv .insta .instapost {
+    height: 25vh;
+    background: pink;
+    margin-left: 5%;
+  }
+  .rightdiv .insta .instapost img {
+    height: 25vh;
+  }
+  .topics {
+    margin-top: 3vh;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .caption {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .abouttext {
+    height: 75vh;
+  }
+  .abouttext .caption {
+    height: 55vh;
+  }
+  .cards {
+    height: 150vh;
+  }
+  .aboutuscard {
     width: 100%;
+    margin-left: 0;
+    margin-top: 2vh;
+    height: 45vh;
+  }
+  .icon {
+    height: 20vh;
+  }
+  .icon .border {
+    margin-left: 42%;
   }
 }
 /*# sourceMappingURL=aboutuspage.css.map */

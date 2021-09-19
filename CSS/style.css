@@ -6,11 +6,11 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Gentium Basic", serif;
 }
 
 body {
   background: #ffffff;
-  font-family: "Gentium Basic", serif;
   font-size: 1.1em;
 }
 
@@ -245,6 +245,17 @@ nav .mainMenu .closeMenu {
   border-radius: 0.5em;
   cursor: pointer;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .tagbox:hover {

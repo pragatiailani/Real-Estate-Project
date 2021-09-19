@@ -2,6 +2,36 @@
 
 $mtop: 5vh;
 
+.title{
+    width: 85%;
+    height: 20vh;
+    font-family: $cursive1;
+    font-weight: bold;
+    font-size: 2.3em;
+    background: rgb(85, 85, 117);
+    position: relative;
+    padding: 0 0.5em;
+}
+.title:before{
+    content: "Special Services";
+    font-size: 0.5em;
+    display: block;
+    font-family: $simple;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    width: 17%;
+    height: 0.3vh;
+    background: $p1;
+    top: 80%;
+    left: 10%;
+}
+
+.captext{
+    padding: 1em 1em;
+}
+
 .rightdiv{
     height: 120vh; 
     width: 23%;
@@ -9,6 +39,7 @@ $mtop: 5vh;
     background: yellow;
     float: left;
 }
+
 
 .topics{
     height: 50vh;
@@ -66,7 +97,7 @@ $p1h: 50vh;
     .text{
         height: $p1h;
         width: 50%;
-        background: black;
+        background: brown;
         float: left;
     }
 

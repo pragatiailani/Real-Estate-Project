@@ -240,6 +240,17 @@ nav .mainMenu .closeMenu {
   border-radius: 0.5em;
   cursor: pointer;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .tagbox:hover {
@@ -321,6 +332,38 @@ nav .mainMenu .closeMenu {
   }
 }
 
+.title {
+  width: 85%;
+  height: 20vh;
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+  font-size: 2.3em;
+  background: #555575;
+  position: relative;
+  padding: 0 0.5em;
+}
+
+.title:before {
+  content: "Special Services";
+  font-size: 0.5em;
+  display: block;
+  font-family: "Gentium Basic", serif;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 0.3vh;
+  background: #FFC30C;
+  top: 80%;
+  left: 10%;
+}
+
+.captext {
+  padding: 1em 1em;
+}
+
 .rightdiv {
   height: 120vh;
   width: 23%;
@@ -387,7 +430,7 @@ nav .mainMenu .closeMenu {
 .panel1 .text {
   height: 50vh;
   width: 50%;
-  background: black;
+  background: brown;
   float: left;
 }
 
