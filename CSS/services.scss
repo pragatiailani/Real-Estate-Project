@@ -2,13 +2,57 @@
 
 $mtop: 5vh;
 
+h2{
+    text-transform: uppercase;
+}
+
+button{
+    position: relative;  
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
+button::before{
+    content: "";
+    height: 10vh;
+    width: 100%;
+    background: $p2;
+    position: absolute;
+    transform: translateY(-100%); 
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+button::after{
+    content: "";
+    height: 10vh;
+    width: 100%;
+    background: $p2;
+    position: absolute;
+    transform: translateY(100%);
+    transition: all 0.2s linear;
+    z-index: -1;
+}
+button:hover:before{
+    transform: translateY(-50%);
+}
+
+button:hover:after{
+    transform: translateY(40%);
+}
+button:hover{
+    color: white;
+}
 .title{
     width: 85%;
     height: 20vh;
     font-family: $cursive1;
     font-weight: bold;
     font-size: 2.3em;
-    background: rgb(85, 85, 117);
     position: relative;
     padding: 0 0.5em;
 }
@@ -36,7 +80,6 @@ $mtop: 5vh;
     height: 120vh; 
     width: 23%;
     margin-left: 7%;
-    background: yellow;
     float: left;
 }
 
@@ -68,21 +111,31 @@ $mtop: 5vh;
     height: 40vh;
     width: 100%;
     margin-top: $mtop;
-    background: red;
+    text-align: center;
+    box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
+    button{
+        text-transform: uppercase;
+        margin-top: 5vh;
+        height: 10vh;
+        width: 70%;
+        font-size: 1.1em;
+        border: none;
+        background: $p1;
+        color: white;
+        font-weight: bold;
+    }
 }
 
 .leftdiv{
-    height: 250vh; 
+    height: 220vh; 
     width: 60%;
     margin-right: 7%;
     margin-left: 3%;
-    background: orange;
     float: right;
 
     .Text{
         height: 30vh;
         width: 100%;
-        background: red;
         margin-top: $mtop;
     }
 }
@@ -91,14 +144,13 @@ $p1h: 50vh;
 .panel1{
     height: $p1h;
     width: 100%;
-    background: pink;
     margin-top: 19vh;
 
     .text{
         height: $p1h;
         width: 50%;
-        background: brown;
         float: left;
+        background: #F7F7F7;
     }
 
     .img{
@@ -111,25 +163,111 @@ $p1h: 50vh;
     }
 }
 
-$p2h: 40vh;
+$p2h: 50vh;
 .panel2{
     height: $p2h;
     width: 100%;
-    background: black;
     margin-top: $mtop;
 
     .text{
         height: $p2h;
         width: 50%;
-        background: pink;
         float: left;
+        ul{
+            margin-left : 7%;
+            li{
+                color: $p1;
+                span{
+                    color: black;
+                }
+            }
+        }
     }
 
     .info{
+        h2{
+            font-size: 1.3em;
+            // margin-left: 5%;
+        }
         height: $p2h;
         width: 50%;
-        background: brown;
         float: right;
+        background: $p1;
+        color: white;
+        text-align: center;
+        button{
+            margin-top: 3vh;
+            width: 70%;
+            font-size: 1.2em;
+            height: 10vh;
+            border: none;
+        }
+    }
+}
+
+.tabcontainer{
+    height: 50vh;
+    width: 100%;
+    margin-top: 3vh;
+
+    .tabs{ 
+        display: flex;
+        flex-wrap: wrap;
+
+        input[type="radio"]{
+            display: none;
+        }
+        label{
+            background: #F1F1F1;
+            font-weight: bold;
+            padding: 0.5em 1.3em;
+            margin-left: 1%;
+            margin-bottom: 0.5vh;
+            border: 0.01em solid gray;
+            font-size: 1.2em;
+            color: gray;
+            transition: all 0.1s linear;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
+            // order: 0; //By Default
+        }
+        label[for="tab1"]{
+            margin-left: 0;
+        }
+        .tab{
+            width: 100%;
+            background: white;
+            order: 1;
+            display: none;
+            line-height: 200%;
+            border: 0.01em solid gray;
+            box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
+        }
+          // + can only be used for the next element.
+        input[type="radio"]:checked + label + .tab{
+            display: block;
+        }
+        input[type="radio"]:checked + label{
+            background: $p1;
+            color: black;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+    .rightdiv{
+        height: 170vh;
+    }
+    .topics{
+        height: 80vh;
+    }
+    .getintouch{
+        height: 50vh;
+    }
+    .leftdiv{
+        height: 240vh;
     }
 }
 
@@ -137,17 +275,22 @@ $p2h: 40vh;
     .leftdiv{
         width: 86%;
         margin-left: 7%;
-        height: 150vh;
+        height: 220vh;
+    }
+    .topics{
+        margin-top: 5vh;
+        height: 60vh;
     }
     .rightdiv{
         width: 86%;
         margin-left: 7%;
+        height: 150vh;
     }
 }
 
 @media only screen and (max-width: 765px){
     .leftdiv{
-        height: 202vh;
+        height: 300vh;
     }
     .panel1{
         height: 102vh;
@@ -159,11 +302,23 @@ $p2h: 40vh;
             margin-top: 2vh;
         }
     }
+    .tabcontainer{
+        .tabs{
+            label{
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 500px){
     .leftdiv{
-        height: 242vh;
+        height: 380vh;
+        .Text{
+            height: 50vh;
+        }
     }
     .panel2{
         height: 80vh;
@@ -172,6 +327,13 @@ $p2h: 40vh;
         }
         .info{
             width: 100%;
+            margin-left: 7%;
         }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .leftdiv{
+        height: 400vh;
     }
 }

@@ -332,13 +332,75 @@ nav .mainMenu .closeMenu {
   }
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15%;
+}
+
+button::before {
+  content: "";
+  height: 10vh;
+  width: 100%;
+  background: #212121;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+button::after {
+  content: "";
+  height: 10vh;
+  width: 100%;
+  background: #212121;
+  position: absolute;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+
+button:hover:before {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+button:hover:after {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+
+button:hover {
+  color: white;
+}
+
 .title {
   width: 85%;
   height: 20vh;
   font-family: "Parisienne", cursive;
   font-weight: bold;
   font-size: 2.3em;
-  background: #555575;
   position: relative;
   padding: 0 0.5em;
 }
@@ -368,7 +430,6 @@ nav .mainMenu .closeMenu {
   height: 120vh;
   width: 23%;
   margin-left: 7%;
-  background: yellow;
   float: left;
 }
 
@@ -401,37 +462,48 @@ nav .mainMenu .closeMenu {
   height: 40vh;
   width: 100%;
   margin-top: 5vh;
-  background: red;
+  text-align: center;
+  -webkit-box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+          box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+}
+
+.getintouch button {
+  text-transform: uppercase;
+  margin-top: 5vh;
+  height: 10vh;
+  width: 70%;
+  font-size: 1.1em;
+  border: none;
+  background: #FFC30C;
+  color: white;
+  font-weight: bold;
 }
 
 .leftdiv {
-  height: 250vh;
+  height: 220vh;
   width: 60%;
   margin-right: 7%;
   margin-left: 3%;
-  background: orange;
   float: right;
 }
 
 .leftdiv .Text {
   height: 30vh;
   width: 100%;
-  background: red;
   margin-top: 5vh;
 }
 
 .panel1 {
   height: 50vh;
   width: 100%;
-  background: pink;
   margin-top: 19vh;
 }
 
 .panel1 .text {
   height: 50vh;
   width: 50%;
-  background: brown;
   float: left;
+  background: #F7F7F7;
 }
 
 .panel1 .img {
@@ -444,41 +516,146 @@ nav .mainMenu .closeMenu {
 }
 
 .panel2 {
-  height: 40vh;
+  height: 50vh;
   width: 100%;
-  background: black;
   margin-top: 5vh;
 }
 
 .panel2 .text {
-  height: 40vh;
+  height: 50vh;
   width: 50%;
-  background: pink;
   float: left;
 }
 
+.panel2 .text ul {
+  margin-left: 7%;
+}
+
+.panel2 .text ul li {
+  color: #FFC30C;
+}
+
+.panel2 .text ul li span {
+  color: black;
+}
+
 .panel2 .info {
-  height: 40vh;
+  height: 50vh;
   width: 50%;
-  background: brown;
   float: right;
+  background: #FFC30C;
+  color: white;
+  text-align: center;
+}
+
+.panel2 .info h2 {
+  font-size: 1.3em;
+}
+
+.panel2 .info button {
+  margin-top: 3vh;
+  width: 70%;
+  font-size: 1.2em;
+  height: 10vh;
+  border: none;
+}
+
+.tabcontainer {
+  height: 50vh;
+  width: 100%;
+  margin-top: 3vh;
+}
+
+.tabcontainer .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tabcontainer .tabs input[type="radio"] {
+  display: none;
+}
+
+.tabcontainer .tabs label {
+  background: #F1F1F1;
+  font-weight: bold;
+  padding: 0.5em 1.3em;
+  margin-left: 1%;
+  margin-bottom: 0.5vh;
+  border: 0.01em solid gray;
+  font-size: 1.2em;
+  color: gray;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+          box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+}
+
+.tabcontainer .tabs label[for="tab1"] {
+  margin-left: 0;
+}
+
+.tabcontainer .tabs .tab {
+  width: 100%;
+  background: white;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: none;
+  line-height: 200%;
+  border: 0.01em solid gray;
+  -webkit-box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+          box-shadow: -1px 9px 18px -6px rgba(131, 124, 124, 0.76);
+}
+
+.tabcontainer .tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+.tabcontainer .tabs input[type="radio"]:checked + label {
+  background: #FFC30C;
+  color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  .rightdiv {
+    height: 170vh;
+  }
+  .topics {
+    height: 80vh;
+  }
+  .getintouch {
+    height: 50vh;
+  }
+  .leftdiv {
+    height: 240vh;
+  }
 }
 
 @media only screen and (max-width: 990px) {
   .leftdiv {
     width: 86%;
     margin-left: 7%;
-    height: 150vh;
+    height: 220vh;
+  }
+  .topics {
+    margin-top: 5vh;
+    height: 60vh;
   }
   .rightdiv {
     width: 86%;
     margin-left: 7%;
+    height: 150vh;
   }
 }
 
 @media only screen and (max-width: 765px) {
   .leftdiv {
-    height: 202vh;
+    height: 300vh;
   }
   .panel1 {
     height: 102vh;
@@ -490,11 +667,19 @@ nav .mainMenu .closeMenu {
     width: 100%;
     margin-top: 2vh;
   }
+  .tabcontainer .tabs label {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .leftdiv {
-    height: 242vh;
+    height: 380vh;
+  }
+  .leftdiv .Text {
+    height: 50vh;
   }
   .panel2 {
     height: 80vh;
@@ -504,6 +689,13 @@ nav .mainMenu .closeMenu {
   }
   .panel2 .info {
     width: 100%;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .leftdiv {
+    height: 400vh;
   }
 }
 /*# sourceMappingURL=services.css.map */

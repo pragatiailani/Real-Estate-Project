@@ -535,19 +535,28 @@ nav .mainMenu .closeMenu {
     margin-top: 10vh;
   }
   .leftdiv .message {
-    height: 65vh;
+    height: 74vh;
   }
   .leftdiv {
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    height: 110vh;
+    height: 130vh;
   }
   .rightdiv {
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
     height: 120vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .tabcontainer {
+    height: 55vh;
+  }
+  .rightdiv {
+    height: 130vh;
   }
 }
 /*# sourceMappingURL=contactus.css.map */

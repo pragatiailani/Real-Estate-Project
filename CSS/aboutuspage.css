@@ -533,7 +533,6 @@ nav .mainMenu .closeMenu {
   font-family: "Parisienne", cursive;
   font-weight: bold;
   font-size: 2.5em;
-  background: #555575;
   position: relative;
 }
 
@@ -550,14 +549,12 @@ nav .mainMenu .closeMenu {
   width: 100%;
   height: 25vh;
   font-size: 1em;
-  background: yellow;
   margin-top: 4vh;
 }
 
 .leftdiv {
   width: 60%;
   height: 290vh;
-  background: purple;
   float: left;
   margin-left: 7%;
   margin-right: 3%;
@@ -566,13 +563,11 @@ nav .mainMenu .closeMenu {
 .abouttext {
   width: 100%;
   height: 45vh;
-  background: blue;
   margin-top: 20vh;
 }
 
 .aboutuscard {
   height: 45vh;
-  background: yellow;
   border: 0.01em solid #929191;
   width: 32%;
   margin-right: 0;
@@ -585,7 +580,6 @@ nav .mainMenu .closeMenu {
 .icon {
   margin-top: 0;
   height: 15vh;
-  background: purple;
 }
 
 .icon .border {
@@ -615,13 +609,11 @@ nav .mainMenu .closeMenu {
 .cardcontent {
   margin-top: 1vh;
   font-size: 0.9em;
-  background: orange;
 }
 
 .cards {
   width: 100%;
   height: 45vh;
-  background: brown;
   margin-top: 5vh;
 }
 
@@ -629,13 +621,11 @@ nav .mainMenu .closeMenu {
   width: 100%;
   height: 80vh;
   margin-top: 5vh;
-  background: blue;
 }
 
 .history .hbox {
   height: 25vh;
   margin-top: 0.5vh;
-  background: brown;
   width: 43%;
   padding: 1em 1em;
   float: left;
@@ -647,7 +637,6 @@ nav .mainMenu .closeMenu {
   width: 100%;
   min-height: 80vh;
   margin-top: 5vh;
-  background: orange;
 }
 
 .accordion .tab {
@@ -749,7 +738,6 @@ nav .mainMenu .closeMenu {
   width: 23%;
   margin-right: 7%;
   height: 200vh;
-  background: pink;
   float: right;
 }
 
@@ -762,7 +750,6 @@ nav .mainMenu .closeMenu {
 .rightdiv .insta {
   width: 100%;
   float: none;
-  background: red;
   height: 35vh;
 }
 
@@ -837,7 +824,7 @@ nav .mainMenu .closeMenu {
   }
 }
 
-@media only screen and (max-width: 985px) {
+@media only screen and (max-width: 990px) {
   .leftdiv {
     width: 95%;
     margin-left: 2.5%;
@@ -847,13 +834,16 @@ nav .mainMenu .closeMenu {
     margin-right: 2.5%;
     height: 160vh;
   }
+  .rightdiv .title {
+    height: 15vh;
+    font-size: 2.5em;
+  }
   .rightdiv .insta {
     height: 55vh;
     margin-left: 0;
   }
   .rightdiv .insta .instapost {
     height: 25vh;
-    background: pink;
     margin-left: 5%;
   }
   .rightdiv .insta .instapost img {
@@ -871,6 +861,18 @@ nav .mainMenu .closeMenu {
 }
 
 @media only screen and (max-width: 660px) {
+  .history {
+    height: 140vh;
+  }
+  .history .hbox {
+    height: 25vh;
+    margin-top: 0.5vh;
+    width: 90%;
+    margin-left: 1%;
+  }
+  .leftdiv {
+    height: 490vh;
+  }
   .abouttext {
     height: 75vh;
   }
@@ -891,6 +893,15 @@ nav .mainMenu .closeMenu {
   }
   .icon .border {
     margin-left: 42%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .leftdiv {
+    height: 505vh;
+  }
+  .rightdiv {
+    height: 170vh;
   }
 }
 /*# sourceMappingURL=aboutuspage.css.map */
