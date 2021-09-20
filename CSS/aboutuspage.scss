@@ -173,7 +173,7 @@ $lgray: rgb(243, 243, 243);
     cursor: pointer;
     border-radius: 0.3em;
     position: relative;
-    border: 0.01em solid $gray;
+    // border: 0.01em solid $gray;
 }
 
 .accordion label {
@@ -195,7 +195,7 @@ $lgray: rgb(243, 243, 243);
     background: white;
     position: relative;
     margin-right: 1.5em;
-    border: 0.01em solid $gray;
+    // border: 0.01em solid $gray;
 }
 
 .accordion label .icon i{

@@ -689,7 +689,6 @@ nav .mainMenu .closeMenu {
   cursor: pointer;
   border-radius: 0.3em;
   position: relative;
-  border: 0.01em solid #929191;
 }
 
 .accordion label span {
@@ -710,7 +709,6 @@ nav .mainMenu .closeMenu {
   background: white;
   position: relative;
   margin-right: 1.5em;
-  border: 0.01em solid #929191;
 }
 
 .accordion label .icon i {

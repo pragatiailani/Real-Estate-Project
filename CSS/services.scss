@@ -127,11 +127,12 @@ button:hover{
 }
 
 .leftdiv{
-    height: 220vh; 
+    height: 260vh; 
     width: 60%;
     margin-right: 7%;
     margin-left: 3%;
     float: right;
+    // background: green;
 
     .Text{
         height: 30vh;
@@ -205,55 +206,155 @@ $p2h: 50vh;
     }
 }
 
-.tabcontainer{
-    height: 50vh;
+
+.accordion{
     width: 100%;
-    margin-top: 3vh;
+    min-height: 80vh;
+    margin-top: 5vh;
+    // background: orange;
+}
 
-    .tabs{ 
-        display: flex;
-        flex-wrap: wrap;
+$gray: rgb(146, 145, 145);
+$lgray: rgb(243, 243, 243);
 
-        input[type="radio"]{
-            display: none;
-        }
-        label{
-            background: #F1F1F1;
-            font-weight: bold;
-            padding: 0.5em 1.3em;
-            margin-left: 1%;
-            margin-bottom: 0.5vh;
-            border: 0.01em solid gray;
-            font-size: 1.2em;
-            color: gray;
-            transition: all 0.1s linear;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
-            // order: 0; //By Default
-        }
-        label[for="tab1"]{
-            margin-left: 0;
-        }
-        .tab{
-            width: 100%;
-            background: white;
-            order: 1;
-            display: none;
-            line-height: 200%;
-            border: 0.01em solid gray;
-            box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
-        }
-          // + can only be used for the next element.
-        input[type="radio"]:checked + label + .tab{
-            display: block;
-        }
-        input[type="radio"]:checked + label{
-            background: $p1;
-            color: black;
+.accordion .tab{
+    margin-bottom: 2vh;
+    border-radius: 0.2em;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);   
+}
+
+.accordion .title{
+    margin-bottom: 5vh;
+}
+
+.tab input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.tab input:checked ~ label{ 
+    background: $lgray;
+    margin-bottom: 0.5vh;
+    span{
+        color: black;
+    }
+    .icon{
+        background: #FFC30C;
+        border: none;
+        i:before{
+            content: '\f068';
+            color: white;
         }
     }
 }
+
+.accordion input{
+    display: none;
+}
+
+.accordion .tab label{
+    background: white;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.3em;
+    position: relative;
+    // border: 0.01em solid $gray;
+}
+
+.accordion label {
+    span{
+    color: $gray;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    }
+    span:hover{
+        color: black;
+    }
+}
+
+.accordion label .icon{
+    height: 9vh;
+    width: 9vh;
+    color: $gray;
+    background: white;
+    position: relative;
+    margin-right: 1.5em;
+    // border: 0.01em solid $gray;
+}
+
+.accordion label .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.accordion .tab .content{
+    max-height: 0px;
+    overflow: hidden;
+    background: $lgray;
+    border-radius: 0.3em;
+}
+
+.accordion .tab .content p{
+    padding: 1em 1em;
+    line-height: 130%;
+    font-size: 1.15em;
+}
+
+// .tabcontainer{
+//     height: 50vh;
+//     width: 100%;
+//     margin-top: 3vh;
+//     // background: purple;
+
+//     .tabs{ 
+//         display: flex;
+//         flex-wrap: wrap;
+
+//         input[type="radio"]{
+//             display: none;
+//         }
+//         label{
+//             background: #F1F1F1;
+//             font-weight: bold;
+//             padding: 0.5em 1.3em;
+//             margin-left: 1%;
+//             margin-bottom: 0.5vh;
+//             border: 0.01em solid gray;
+//             font-size: 1.2em;
+//             color: gray;
+//             transition: all 0.1s linear;
+//             text-transform: uppercase;
+//             cursor: pointer;
+//             box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
+//             // order: 0; //By Default
+//         }
+//         label[for="tab1"]{
+//             margin-left: 0;
+//         }
+//         .tab{
+//             width: 100%;
+//             background: white;
+//             order: 1;
+//             display: none;
+//             line-height: 200%;
+//             // border: 0.01em solid gray;
+//             box-shadow: -1px 9px 18px -6px rgba(131,124,124,0.76);
+//             padding: 1em 1em;
+//         }
+//           // + can only be used for the next element.
+//         input[type="radio"]:checked + label + .tab{
+//             display: block;
+//         }
+//         input[type="radio"]:checked + label{
+//             background: $p1;
+//             color: black;
+//         }
+//     }
+// }
 
 
 @media only screen and (max-width: 1200px){
@@ -290,7 +391,7 @@ $p2h: 50vh;
 
 @media only screen and (max-width: 765px){
     .leftdiv{
-        height: 300vh;
+        height: 320vh;
     }
     .panel1{
         height: 102vh;
@@ -302,23 +403,30 @@ $p2h: 50vh;
             margin-top: 2vh;
         }
     }
-    .tabcontainer{
-        .tabs{
-            label{
-                width: 100%;
-                margin-left: 0;
-                text-align: center;
-            }
-        }
+    .accordion{
+        height: 90vh;
     }
+    // .tabcontainer{
+    //     height: 80vh;
+    //     .tabs{
+    //         label{
+    //             width: 100%;
+    //             margin-left: 0;
+    //             text-align: center;
+    //         }
+    //     }
+    // }
 }
 
 @media only screen and (max-width: 500px){
     .leftdiv{
-        height: 380vh;
+        height: 390vh;
         .Text{
             height: 50vh;
         }
+    }
+    .accordion{
+        height: 100vh;
     }
     .panel2{
         height: 80vh;
